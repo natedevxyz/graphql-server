@@ -59,7 +59,11 @@ async function comparePoaps(address1, address2) {
 		}
 	}
 
-	return common;
+	return {
+		address: address1,
+		follower: address2,
+		sharedPoaps: common,
+	};
 }
 
-export { comparePoaps };
+module.exports = { comparePoaps };
