@@ -15,5 +15,5 @@ app.use(
 
 app.listen(
 	process.env.PORT || PORT,
-	console.log(`Server running on port ${port}`)
+	console.log(`Server running on port ${PORT}`)
 );
