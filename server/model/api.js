@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 async function comparePoaps(address1, address2) {
 	const data1 = await fetch(`https://api.poap.tech/actions/scan/${address1}`, {
 		headers: {
