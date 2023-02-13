@@ -1,9 +1,12 @@
 const fetch = require('node-fetch');
 
+const API_KEY = process.env.POAP_API_KEY;
+
 async function comparePoaps(address1, address2) {
 	const data1 = await fetch(`https://api.poap.tech/actions/scan/${address1}`, {
 		headers: {
 			'Content-Type': 'application/json',
+			'x-api-key': API_KEY,
 		},
 	});
 
@@ -12,6 +15,7 @@ async function comparePoaps(address1, address2) {
 	const data2 = await fetch(`https://api.poap.tech/actions/scan/${address2}`, {
 		headers: {
 			'Content-Type': 'application/json',
+			'x-api-key': API_KEY,
 		},
 	});
 
